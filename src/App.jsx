@@ -101,9 +101,9 @@ function ProjectCard({ image, alt, title, tag }) {
       }`}
     >
       <div className="bg-white rounded-3xl p-4 md:p-8 shadow-sm hover:shadow-lg transition-all duration-500 hover:scale-[1.01]">
-        <div className="rounded-2xl overflow-hidden border border-gray-100 bg-gray-50 aspect-[4/3] md:aspect-[16/10] relative">
+        <div className="rounded-2xl overflow-hidden border border-gray-100 bg-gray-50 flex flex-col relative">
           {/* Browser mockup bar */}
-          <div className="absolute top-0 left-0 right-0 h-10 bg-gray-900 flex items-center px-4 gap-2 z-10">
+          <div className="h-10 bg-gray-900 flex items-center px-4 gap-2 flex-shrink-0">
             <div className="flex gap-1.5">
               <div className="w-2.5 h-2.5 rounded-full bg-red-400/80"></div>
               <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/80"></div>
@@ -117,7 +117,7 @@ function ProjectCard({ image, alt, title, tag }) {
             src={image}
             alt={alt}
             loading="lazy"
-            className="w-full h-full object-cover object-top pt-10 transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.03]"
           />
         </div>
         {/* Project label */}
@@ -302,7 +302,7 @@ export default function App() {
 
       {/* ───── RIGHT MAIN CONTENT ───── */}
       <main className="flex-1 h-full overflow-y-auto p-4 md:p-8 lg:p-12 scroll-smooth custom-scrollbar">
-        <div className="max-w-5xl mx-auto space-y-24 pb-24">
+        <div className="max-w-6xl mx-auto space-y-24 pb-24">
           {/* Interleave projects with testimonials */}
           {projects.map((project, i) => (
             <div key={i} className="space-y-24">
