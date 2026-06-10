@@ -172,7 +172,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-[#F7F7F7] font-sans text-gray-900 overflow-hidden">
+    <div className="flex flex-col md:flex-row h-auto md:h-screen bg-[#F7F7F7] font-sans text-gray-900 overflow-y-auto md:overflow-hidden">
       {/* ───── LEFT SIDEBAR ───── */}
       <aside className="w-full md:w-[380px] lg:w-[420px] flex-shrink-0 bg-white h-auto md:h-full md:overflow-y-auto flex flex-col justify-between border-r border-gray-100 p-8 lg:p-12">
         <div>
@@ -301,7 +301,7 @@ export default function App() {
       </aside>
 
       {/* ───── RIGHT MAIN CONTENT ───── */}
-      <main className="flex-1 h-full overflow-y-auto p-4 md:p-8 lg:p-12 scroll-smooth custom-scrollbar">
+      <main className="flex-1 h-auto md:h-full md:overflow-y-auto p-4 md:p-8 lg:p-12 scroll-smooth custom-scrollbar">
         <div className="max-w-6xl mx-auto space-y-24 pb-24">
           {/* Interleave projects with testimonials */}
           {projects.map((project, i) => (
