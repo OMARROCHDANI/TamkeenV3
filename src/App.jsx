@@ -27,13 +27,13 @@ const skills = [
   'Brand Identity & Positioning',
   'UX Architecture & Structure',
   'Custom Web Development',
-  'Digital Authority Systems',
+  'Performance & Speed Optimization',
 ]
 
 const projects = [
   {
     image: '/project-vantage.jpg',
-    alt: 'Aston Martin Vantage UI — Figma Concept Study',
+    alt: 'Aston Martin Vantage UI | Figma Concept Study',
     title: 'Vantage UI',
     tag: 'Figma Concept',
     link: 'https://www.instagram.com/p/DXr4saTDNd-/',
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     image: '/project-bihfih.png',
-    alt: 'Bihfih — Appliance Repair Landing Page',
+    alt: 'Bihfih | Appliance Repair Landing Page',
     title: 'Bihfih',
     tag: 'Landing Page',
     link: 'https://bihfih-electromenager.com/',
@@ -98,9 +98,8 @@ function ProjectCard({ image, alt, title, tag, link }) {
   return (
     <section
       ref={ref}
-      className={`group transition-all duration-700 ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
+      className={`group transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
     >
       <div className="bg-white rounded-3xl p-4 md:p-8 shadow-sm hover:shadow-lg transition-all duration-500 hover:scale-[1.01]">
         <a
@@ -146,9 +145,8 @@ function Testimonial({ text, highlight, suffix }) {
   return (
     <section
       ref={ref}
-      className={`text-center px-4 max-w-2xl mx-auto transition-all duration-700 ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
+      className={`text-center px-4 max-w-2xl mx-auto transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
     >
       <p className="text-2xl md:text-3xl font-medium text-gray-400 leading-tight">
         {text}{' '}
@@ -185,9 +183,8 @@ export default function App() {
         <div>
           {/* Header */}
           <div
-            className={`flex items-center justify-between mb-8 transition-all duration-700 ${
-              loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-            }`}
+            className={`flex items-center justify-between mb-8 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+              }`}
           >
             <div className="flex items-center gap-3">
               <img
@@ -203,9 +200,8 @@ export default function App() {
 
           {/* Intro */}
           <div
-            className={`mb-6 transition-all duration-700 delay-200 ${
-              loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-            }`}
+            className={`mb-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
           >
             <h1 className="text-2xl font-bold leading-tight mb-3 text-gray-900 tracking-tight">
               Values-First{' '}
@@ -233,9 +229,8 @@ export default function App() {
 
           {/* Skills / Tech */}
           <div
-            className={`mb-6 transition-all duration-700 delay-400 ${
-              loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-            }`}
+            className={`mb-6 transition-all duration-700 delay-400 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
           >
             <h2 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
               Our Capabilities
@@ -250,9 +245,8 @@ export default function App() {
 
         {/* Footer */}
         <div
-          className={`flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-gray-400 mt-6 pt-6 border-t border-gray-100 transition-all duration-700 delay-600 ${
-            loaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-gray-400 mt-6 pt-6 border-t border-gray-100 transition-all duration-700 delay-600 ${loaded ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <a
             href="https://wa.me/212785628859"
@@ -268,7 +262,7 @@ export default function App() {
             WhatsApp Inquiry
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/tamkeenagency/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-900 transition-colors flex items-center gap-1.5 group/link"
