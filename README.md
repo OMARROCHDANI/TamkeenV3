@@ -1,19 +1,20 @@
-# Omar Rochdani - Full-Stack Developer & Designer Portfolio
+# Tamkeen — Values-First Web Agency
 
-Personal portfolio website built with React, Vite, and Tailwind CSS.
+Strategic digital foundations for Muslim brands that care about halal income, clarity, and long-term authority.
 
 ## Features
-- **Modern UI/UX**: Premium dark theme designed with curated palettes, gradients, and micro-animations.
-- **Project Showcases**: Includes showcases for Vantage UI, Tamkeen Noir, and Bihfih.
+- **Modern UI/UX**: Premium theme designed with curated palettes, gradients, and micro-animations.
+- **Disciplined Framework**: Details of the 6-phase agency method (Qualification, Discovery, Strategic Research, Design Foundations, Implementation, Empowerment).
+- **Project Showcases**: Integrates selective work showcasing Vantage UI, Tamkeen Noir, and Bihfih.
 - **Direct Contact Integrations**: 
-  - "Start Project" connects to email (omarrochdani4life@gmail.com)
-  - "Let's Chat" connects directly to WhatsApp (+212620042642)
+  - "Start Your Project" connects to email (hello@tamkeen.design)
+  - "WhatsApp Inquiry" connects directly to WhatsApp (+212620042642)
 - **Responsive Design**: Optimized for mobile, tablet, and desktop viewports.
 
 ## Tech Stack
 - **Frontend**: React (Vite)
 - **Styling**: Tailwind CSS
-- **Icons**: Lucide React / React Icons
+- **Icons**: Lucide React
 - **Deployment & Tooling**: Node.js, npm, Git
 
 ## Getting Started

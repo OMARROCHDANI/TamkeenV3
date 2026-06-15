@@ -1,34 +1,33 @@
 import { useState, useEffect, useRef } from 'react'
 import { ArrowRight, Mail } from 'lucide-react'
 
-/* ─── Inline brand icons (lucide-react removed brand icons) ─── */
-function LinkedinIcon({ size = 13, className = '' }) {
+/* ─── Inline brand icons ─── */
+function WhatsAppIcon({ size = 13, className = '' }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect width="4" height="12" x="2" y="9" />
-      <circle cx="4" cy="4" r="2" />
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
     </svg>
   )
 }
 
-function GithubIcon({ size = 13, className = '' }) {
+function InstagramIcon({ size = 13, className = '' }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-      <path d="M9 18c-4.51 2-5-2-7-2" />
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
     </svg>
   )
 }
 
 /* ─── Data ─── */
 const skills = [
-  'React / Three.js',
-  'Python / Django',
-  'Web Design',
-  'Figma / UI-UX',
-  'Full Stack Dev',
-  'Branding',
+  'Strategic Web Design',
+  'Conversion-Focused Websites',
+  'Brand Identity & Positioning',
+  'UX Architecture & Structure',
+  'Custom Web Development',
+  'Digital Authority Systems',
 ]
 
 const projects = [
@@ -164,7 +163,7 @@ function Testimonial({ text, highlight, suffix }) {
 function SkillBadge({ label, index }) {
   return (
     <div
-      className={`animate-fade-in-up delay-${(index + 1) * 100} border border-gray-100 rounded-xl px-4 py-3 text-xs font-medium text-gray-600 flex items-center justify-center text-center hover:bg-gray-50 hover:border-gray-200 hover:-translate-y-0.5 transition-all duration-300 cursor-default`}
+      className={`animate-fade-in-up delay-${(index + 1) * 100} border border-gray-100 rounded-lg px-3 py-2 text-xs font-medium text-gray-600 flex items-center justify-center text-center hover:bg-gray-50 hover:border-gray-200 hover:-translate-y-0.5 transition-all duration-300 cursor-default`}
     >
       {label}
     </div>
@@ -182,77 +181,64 @@ export default function App() {
   return (
     <div className="flex flex-col md:flex-row h-auto md:h-screen bg-[#F7F7F7] font-sans text-gray-900 overflow-y-auto md:overflow-hidden">
       {/* ───── LEFT SIDEBAR ───── */}
-      <aside className="w-full md:w-[380px] lg:w-[420px] flex-shrink-0 bg-white h-auto md:h-full md:overflow-y-auto flex flex-col justify-between border-r border-gray-100 p-8 lg:p-12">
+      <aside className="w-full md:w-[380px] lg:w-[400px] flex-shrink-0 bg-white h-auto md:h-full md:overflow-y-auto flex flex-col justify-between border-r border-gray-100 p-6 lg:p-8 custom-scrollbar">
         <div>
           {/* Header */}
           <div
-            className={`flex items-center justify-between mb-16 transition-all duration-700 ${
+            className={`flex items-center justify-between mb-8 transition-all duration-700 ${
               loaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
             }`}
           >
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-sm ring-2 ring-white ring-offset-2 ring-offset-gray-50">
-                OR
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight">
-                Omar R.
-              </span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-100 rounded-full">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-              <span className="text-xs font-medium text-emerald-700">
-                Available
+              <img
+                src="/Tamkeen_Log.jpeg"
+                alt="Tamkeen Logo"
+                className="w-10 h-10 rounded-full object-cover shadow-sm ring-2 ring-white ring-offset-2 ring-offset-gray-50"
+              />
+              <span className="font-display font-bold text-lg tracking-tight">
+                tamkeen.
               </span>
             </div>
           </div>
 
           {/* Intro */}
           <div
-            className={`mb-8 transition-all duration-700 delay-200 ${
+            className={`mb-6 transition-all duration-700 delay-200 ${
               loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            <h1 className="text-[1.65rem] font-bold leading-tight mb-4 text-gray-900 tracking-tight">
-              Building premium digital experiences that{' '}
-              <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
-                convert.
+            <h1 className="text-2xl font-bold leading-tight mb-3 text-gray-900 tracking-tight">
+              Values-First{' '}
+              <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                WEB AGENCY.
               </span>
             </h1>
-            <p className="text-gray-500 text-sm leading-relaxed mb-8">
-              Full-stack developer & designer. Founder of TAMKEEN agency — I craft
-              high-impact websites and digital products that elevate brands and
-              drive real business results.
+            <p className="text-gray-500 text-sm leading-relaxed mb-6">
+              We build strategic digital foundations for Muslim brands that care about halal income, clarity, and long-term authority.
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-3 mb-12">
+            <div className="flex flex-wrap gap-2.5 mb-6">
               <a
-                href="mailto:omarrochdani4life@gmail.com"
-                id="start-project-btn"
-                className="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-gray-900/20 hover:-translate-y-0.5 active:translate-y-0"
-              >
-                Start Project <ArrowRight size={16} />
-              </a>
-              <a
-                href="https://wa.me/212620042642"
+                href="https://wa.me/212785628859"
                 target="_blank"
                 rel="noopener noreferrer"
-                id="lets-chat-btn"
-                className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+                id="start-project-btn"
+                className="flex items-center gap-1.5 bg-gray-900 hover:bg-gray-800 text-white px-5 py-2.5 rounded-full text-xs font-medium transition-all duration-300 hover:shadow-lg hover:shadow-gray-900/20 hover:-translate-y-0.5 active:translate-y-0"
               >
-                Let's Chat
+                Start Project <ArrowRight size={14} />
               </a>
             </div>
           </div>
 
-          {/* Skills */}
+          {/* Skills / Tech */}
           <div
-            className={`mb-12 transition-all duration-700 delay-400 ${
+            className={`mb-6 transition-all duration-700 delay-400 ${
               loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            <h2 className="text-sm font-bold text-gray-900 mb-4">
-              What I work with...
+            <h2 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
+              Our Capabilities
             </h2>
             <div className="grid grid-cols-2 gap-2">
               {skills.map((skill, index) => (
@@ -264,46 +250,34 @@ export default function App() {
 
         {/* Footer */}
         <div
-          className={`flex items-center gap-5 text-xs font-medium text-gray-400 mt-8 pt-8 border-t border-gray-100 transition-all duration-700 delay-600 ${
+          className={`flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-gray-400 mt-6 pt-6 border-t border-gray-100 transition-all duration-700 delay-600 ${
             loaded ? 'opacity-100' : 'opacity-0'
           }`}
         >
           <a
-            href="mailto:omarrochdani4life@gmail.com"
-            id="email-link"
-            className="hover:text-gray-900 transition-colors flex items-center gap-1.5 group/link"
-          >
-            <Mail
-              size={13}
-              className="group-hover/link:text-violet-500 transition-colors"
-            />
-            Email
-          </a>
-          <a
-            href="https://linkedin.com/in/omarrochdani"
+            href="https://wa.me/212785628859"
             target="_blank"
             rel="noopener noreferrer"
-            id="linkedin-link"
+            id="whatsapp-link"
             className="hover:text-gray-900 transition-colors flex items-center gap-1.5 group/link"
           >
-            <LinkedinIcon
+            <WhatsAppIcon
               size={13}
-              className="group-hover/link:text-violet-500 transition-colors"
+              className="group-hover/link:text-emerald-500 transition-colors"
             />
-            LinkedIn
+            WhatsApp Inquiry
           </a>
           <a
-            href="https://github.com/omarrochdani"
+            href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            id="github-link"
             className="hover:text-gray-900 transition-colors flex items-center gap-1.5 group/link"
           >
-            <GithubIcon
+            <InstagramIcon
               size={13}
-              className="group-hover/link:text-violet-500 transition-colors"
+              className="group-hover/link:text-emerald-500 transition-colors"
             />
-            GitHub
+            Instagram
           </a>
         </div>
       </aside>
